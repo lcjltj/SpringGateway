@@ -1,24 +1,8 @@
-server:
-  port: 8080
-  
-spring:
+ spring:
   profiles:
-    active: dev
-    
+    active: dev  
   application:
     name: gateway
-    
   cloud:
     config:
-      uri: http://192.168.219.107:8088/
-  
-  rabbitmq:
-    host: localhost
-    username: guest
-    password: guest
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: ['refresh']
+      uri: http://125.177.157.253:8088/
