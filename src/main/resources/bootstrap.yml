@@ -1,8 +1,8 @@
- spring:
+spring:
   profiles:
     active: dev  
   application:
     name: gateway
   cloud:
     config:
-      uri: http://125.177.157.253:8088/
+      uri: http://lcj0821.synology.me:8088/

@@ -49,7 +49,11 @@ public class JwtRequestFilter implements GlobalFilter {
 					throw new DefaultException(JwtExceptionType.JwtException);
 				}
 			}
-			
+
+			if (path.contains("/inner/")) {
+				throw new DefaultException(JwtExceptionType.NOT_ALLOW_REQUEST);
+			}
+
 			return chain.filter(exchange);
 		} catch (ExpiredJwtException e) {
 			throw new DefaultException(JwtExceptionType.ExpiredJwtException);
